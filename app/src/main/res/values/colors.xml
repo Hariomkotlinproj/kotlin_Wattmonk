@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="white">#FFFF</color>
+    <color name="appbackgroundwhite">#F8F8F8</color>
+    <color name="buttonColor">#FBB200</color>
+    <color name="backgroundcolor">#F8F8F8</color>
+    <color name="textcolor">#333029</color>
 </resources>
