@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    id("kotlin-kapt")
 
 
 }
@@ -57,40 +58,23 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+    val hilt_version="2.38.1"
+    implementation ("com.google.dagger:hilt-android:$hilt_version")
+    kapt ("com.google.dagger:hilt-compiler:$hilt_version")
 
+    val lifecycle_version = "2.5.0-beta01"
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
+    implementation ("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version")
 
-
-    
-
-
-
-
-
-
-
-
-
-    // retrofit
-//    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
-//    // gson converter
-//    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
-
-
-    implementation ("com.google.dagger:hilt-android:2.38.1")
-//    kapt ("com.google.dagger:hilt-compiler:2.38.1")
-
-//    lifecycle
-    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.0")
-    implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.5.0")
-// retrofit_version
-    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    val retrofit_version = "2.9.0"
+    implementation ("com.squareup.retrofit2:retrofit:$retrofit_version")
+    implementation ("com.squareup.retrofit2:converter-gson:$retrofit_version")
     implementation ("com.squareup.okhttp3:okhttp:4.9.3")
 
     val room_version = "2.4.2"
     implementation ("androidx.room:room-runtime:$room_version")
     implementation ("androidx.room:room-ktx:$room_version")
-//    kapt ("androidx.room:room-compiler:$room_version")
+    kapt ("androidx.room:room-compiler:$room_version")
 
     val coroutines_version = "1.6.0"
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version")
@@ -101,9 +85,5 @@ dependencies {
     implementation ("androidx.navigation:navigation-ui-ktx:$navigation_version")
 
     implementation ("com.github.ybq:Android-SpinKit:1.4.0")
-
-
-
-
 
 }

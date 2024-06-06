@@ -1,4 +1,4 @@
-package com.example.wattmok.models.Login
+package com.example.wattmok.models.LoginModule
 
 data class Accessright(
     val constantname: String,

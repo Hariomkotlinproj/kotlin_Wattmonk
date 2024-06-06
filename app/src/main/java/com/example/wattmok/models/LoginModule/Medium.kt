@@ -1,4 +1,4 @@
-package com.example.wattmok.models.Login
+package com.example.wattmok.models.LoginModule
 
 data class Medium(
     val ext: String,

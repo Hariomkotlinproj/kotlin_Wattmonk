@@ -41,8 +41,8 @@
             <androidx.core.widget.NestedScrollView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toTopOf="@+id/footerLayout">
+                app:layout_constraintBottom_toTopOf="@+id/footerLayout"
+                app:layout_constraintTop_toTopOf="parent">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -74,6 +74,7 @@
                         app:layout_constraintBottom_toTopOf="@+id/emailInputLayout"
                         app:layout_constraintStart_toStartOf="parent" />
 
+
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/emailInputLayout"
                         android:layout_width="match_parent"
@@ -83,8 +84,8 @@
                         android:outlineProvider="none"
                         app:boxStrokeWidth="0dp"
                         app:boxStrokeWidthFocused="0dp"
-                        app:hintTextColor="#858585"
                         app:cursorColor="@color/buttonColor"
+                        app:hintTextColor="#858585"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/signInText">
@@ -107,9 +108,9 @@
                         android:background="@drawable/edit_text"
                         android:outlineProvider="none"
                         app:boxStrokeWidth="0dp"
-                        app:hintTextColor="#858585"
                         app:boxStrokeWidthFocused="0dp"
                         app:cursorColor="@color/buttonColor"
+                        app:hintTextColor="#858585"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/emailInputLayout"
@@ -122,6 +123,7 @@
                             android:inputType="textPassword" />
 
                     </com.google.android.material.textfield.TextInputLayout>
+
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
@@ -182,11 +184,11 @@
                             android:layout_height="wrap_content"
                             android:text="Don’t have an account yet?"
                             android:textColor="@color/textcolor"
+                            app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toStartOf="@+id/signUpText"
                             app:layout_constraintHorizontal_chainStyle="packed"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"/>
+                            app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
                             android:id="@+id/signUpText"
@@ -194,10 +196,10 @@
                             android:layout_height="wrap_content"
                             android:text=" Sign up"
                             android:textColor="@color/buttonColor"
-                            app:layout_constraintStart_toEndOf="@+id/dontaccounttext"
+                            app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"/>
+                            app:layout_constraintStart_toEndOf="@+id/dontaccounttext"
+                            app:layout_constraintTop_toTopOf="parent" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.core.widget.NestedScrollView>
@@ -216,21 +218,21 @@
                     android:id="@+id/footerText1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
                     android:text="© Wattmonk Technologies Private Limited. All Rights Reserved,"
                     android:textColor="@color/textcolor"
                     android:textSize="12sp"
-                    app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    android:layout_marginBottom="4dp" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <!-- Second line of text -->
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_constraintTop_toBottomOf="@id/footerText1"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent">
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/footerText1">
 
                     <TextView
                         android:id="@+id/footerText2"
