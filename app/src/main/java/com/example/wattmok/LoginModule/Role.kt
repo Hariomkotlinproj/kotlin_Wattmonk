@@ -1,4 +1,4 @@
-package com.example.wattmok.models.LoginModule
+package com.example.wattmok.LoginModule
 
 data class Role(
     val createdAt: Any,

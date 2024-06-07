@@ -1,6 +1,6 @@
-package com.example.wattmok.models.LoginModule
+package com.example.wattmok.LoginModule
 
-data class Medium(
+data class Thumbnail(
     val ext: String,
     val hash: String,
     val height: Int,

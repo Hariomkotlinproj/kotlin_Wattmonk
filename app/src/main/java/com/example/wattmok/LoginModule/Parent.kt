@@ -1,7 +1,6 @@
-package com.example.wattmok.models.LoginModule
+package com.example.wattmok.LoginModule
 
-data class User(
-    val accessrights: Accessrights,
+data class Parent(
     val accesstostartsurvey: Boolean,
     val addedbyid: Any,
     val blocked: Boolean,
@@ -10,8 +9,10 @@ data class User(
     val clienttype: Any,
     val cometchatuid: String,
     val company: String,
+    val confirmationToken: Any,
     val confirmed: Boolean,
     val createdAt: String,
+    val defaultpassword: String,
     val email: String,
     val freelancer: Boolean,
     val fullname: String,
@@ -28,11 +29,12 @@ data class User(
     val kekalogintime: Any,
     val kekalogouttime: Any,
     val masterparentid: Int,
+    val masterpassword: String,
     val otp: Any,
-    val parent: Parent,
+    val password: String,
     val peengineertype: String,
     val provider: String,
-    val role: Role,
+    val resetPasswordToken: String,
     val roleid: Any,
     val showingfinancingoption: Boolean,
     val startsurveytoday: Any,
@@ -40,7 +42,7 @@ data class User(
     val uniquecode: String,
     val updatedAt: String,
     val username: String,
-    val userprofile: UserprofileX,
+    val userprofile: Userprofile,
     val v3usertoken: Any,
     val walletcurrentbalance: Int
 )

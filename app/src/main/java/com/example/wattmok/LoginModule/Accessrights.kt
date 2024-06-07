@@ -1,4 +1,4 @@
-package com.example.wattmok.models.LoginModule
+package com.example.wattmok.LoginModule
 
 data class Accessrights(
     val accessrights: List<Accessright>,

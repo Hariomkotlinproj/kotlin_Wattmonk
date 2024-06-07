@@ -1,4 +1,4 @@
-package com.example.wattmok.models.LoginModule
+package com.example.wattmok.LoginModule
 
 data class Formats(
     val large: Large,

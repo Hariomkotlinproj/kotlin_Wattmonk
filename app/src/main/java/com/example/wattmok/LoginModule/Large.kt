@@ -1,6 +1,6 @@
-package com.example.wattmok.models.LoginModule
+package com.example.wattmok.LoginModule
 
-data class Thumbnail(
+data class Large(
     val ext: String,
     val hash: String,
     val height: Int,

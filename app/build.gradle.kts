@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
 
 
 }
@@ -58,11 +59,11 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    val hilt_version="2.38.1"
-    implementation ("com.google.dagger:hilt-android:$hilt_version")
-    kapt ("com.google.dagger:hilt-compiler:$hilt_version")
+    val hilt_version="2.50"
+    implementation("com.google.dagger:hilt-android:$hilt_version")
+    kapt("com.google.dagger:hilt-android-compiler:$hilt_version")
 
-    val lifecycle_version = "2.5.0-beta01"
+    val lifecycle_version = "2.8.1"
     implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
     implementation ("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version")
 
@@ -71,19 +72,19 @@ dependencies {
     implementation ("com.squareup.retrofit2:converter-gson:$retrofit_version")
     implementation ("com.squareup.okhttp3:okhttp:4.9.3")
 
-    val room_version = "2.4.2"
+    val room_version = "2.6.1"
     implementation ("androidx.room:room-runtime:$room_version")
     implementation ("androidx.room:room-ktx:$room_version")
     kapt ("androidx.room:room-compiler:$room_version")
 
-    val coroutines_version = "1.6.0"
+    val coroutines_version = "1.3.9"
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version")
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version")
 
-    val navigation_version = "2.4.2"
+    val navigation_version = "2.7.7"
     implementation ("androidx.navigation:navigation-fragment-ktx:$navigation_version")
     implementation ("androidx.navigation:navigation-ui-ktx:$navigation_version")
 
-    implementation ("com.github.ybq:Android-SpinKit:1.4.0")
+
 
 }
