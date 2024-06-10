@@ -1,19 +1,26 @@
 package com.example.wattmok
 
 import android.os.Bundle
+import android.util.Log
 import android.util.Patterns
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
+import androidx.fragment.app.viewModels
+import com.example.wattmok.LoginModule.LoginRequest
+import com.example.wattmok.Utils.Constants
 import com.example.wattmok.databinding.FragmentLoginBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class LoginFragment : Fragment() {
 
     private var _binding: FragmentLoginBinding? = null
     private val binding get() = _binding!!
+private val authViewModal by viewModels<AuthViewModal>()
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -22,9 +29,12 @@ class LoginFragment : Fragment() {
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
 
         binding.signInButton.setOnClickListener {
-            if (validateInputs()) {
-                findNavController().navigate(R.id.action_loginFragment_to_homeScreen)
-            }
+            Toast.makeText(this.context,"Btn Clicked",Toast.LENGTH_SHORT).show()
+//            if (validateInputs()) {
+            authViewModal.loginUser(LoginRequest("speedtestcsa@gmail.com","test123","mobile"))
+//                findNavController().navigate(R.id.action_loginFragment_to_homeScreen)
+
+//            }
         }
 
         return binding.root
